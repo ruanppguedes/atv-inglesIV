@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Reference</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📡 API Reference</h1>
+    <nav>
+      <a href="index.html">README</a>
+      <a href="installation.html">Installation</a>
+      <a href="api.html">API Reference</a>
+      <a href="contribute.html">Contribution</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>📘 Endpoints</h2>
+      <table>
+        <tr><th>Method</th><th>Endpoint</th><th>Description</th></tr>
+        <tr><td>GET</td><td>/tasks</td><td>Retrieve all tasks</td></tr>
+        <tr><td>POST</td><td>/tasks</td><td>Create a new task</td></tr>
+        <tr><td>PUT</td><td>/tasks/:id</td><td>Update a task by ID</td></tr>
+        <tr><td>DELETE</td><td>/tasks/:id</td><td>Delete a task by ID</td></tr>
+      </table>
+    </section>
+    <section>
+      <h2>📂 Example Request (fetch)</h2>
+      <pre><code>fetch('/tasks', {
+  method: 'POST',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({ title: 'New Task' })
+});</code></pre>
+    </section>
+    <section>
+      <h2>🔁 Response Codes</h2>
+      <ul>
+        <li>200 OK – Success</li>
+        <li>201 Created – Task added</li>
+        <li>400 Bad Request – Missing data</li>
+        <li>404 Not Found – Task does not exist</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Task Manager Team</p>
+  </footer>
+</body>
+</html>
